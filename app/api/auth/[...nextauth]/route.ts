@@ -1,9 +1,9 @@
 //@ts-nocheck
-import NextAuth from "next-auth"
+import NextAuth, { AuthOptions } from "next-auth"
 import TwitchProvider from "next-auth/providers/twitch"
 import { SupabaseAdapter } from "@auth/supabase-adapter"
 
-export const authOptions = {
+export const authOptions:AuthOptions = {
   providers: [
     TwitchProvider({
       clientId: process.env.TWITCH_CLIENT_ID,
